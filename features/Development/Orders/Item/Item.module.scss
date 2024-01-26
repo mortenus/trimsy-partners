@@ -1,0 +1,287 @@
+.item {
+  width: 100%;
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 15px 10px;
+
+  //   cursor: pointer;
+
+  //   &:hover {
+  //     background: #d7d7d7;
+  //   }
+
+  border-bottom: 1px solid #9f9f9f;
+
+  &:first-child {
+    border-top: 1px solid #9f9f9f;
+  }
+
+  .block {
+    display: flex;
+    align-items: inherit;
+
+    @media (max-width: 734px) {
+      flex-direction: column;
+      align-items: unset;
+      //   display: block;
+    }
+
+    &--action {
+      display: flex;
+      align-items: inherit;
+    }
+  }
+
+  .id {
+    color: #616161;
+    font-size: 18px;
+
+    width: 75px;
+    cursor: default;
+    user-select: none;
+    overflow: hidden;
+    margin-right: 20px;
+    text-overflow: ellipsis;
+
+    @media (max-width: 1280px) {
+      display: none;
+    }
+  }
+
+  .name {
+    font-size: 18px;
+    color: #000;
+    font-weight: 400;
+
+    width: 250px;
+
+    @media (max-width: 1280px) {
+      width: 150px;
+    }
+
+    @media (max-width: 734px) {
+      font-size: 14px;
+    }
+  }
+
+  .email {
+    font-size: 18px;
+
+    color: #616161;
+    width: 250px;
+
+    @media (max-width: 734px) {
+      width: 0;
+      font-size: 10px;
+    }
+  }
+
+  .product {
+    width: 150px;
+
+    cursor: default;
+    user-select: none;
+    text-align: center;
+
+    @media (max-width: 734px) {
+      width: auto;
+      padding: 0 15px;
+
+      display: flex;
+      justify-content: center;
+      font-size: 12px;
+    }
+  }
+
+  .status {
+    text-align: center;
+    width: 100px;
+    padding: 5px;
+    // background: #eee;
+
+    margin-right: 25px;
+
+    font-size: 18px;
+    font-weight: 500;
+
+    cursor: default;
+    user-select: none;
+
+    @media (max-width: 1280px) {
+      display: none;
+    }
+  }
+
+  .new {
+    color: darken(#04af00, 5%);
+
+    background: #ddf1dd;
+  }
+
+  .canceled {
+    color: #ff0000;
+
+    background: #fdebea;
+  }
+
+  .pending {
+    color: darken(rgb(255, 255, 0), 12%);
+
+    background: #f1ffca81;
+  }
+
+  .date {
+    margin-right: 10px;
+
+    cursor: default;
+    user-select: none;
+
+    @media (max-width: 734px) {
+      font-size: 10px;
+    }
+  }
+
+  .more {
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    padding: 15px 8px;
+    border-radius: 50px;
+
+    cursor: pointer;
+
+    &:hover {
+      background: #d1d1d1;
+    }
+  }
+}
+
+.popup {
+  position: relative;
+  //   top: 75px;
+  //   left: -30px;
+  //   background: #fff;
+  //   box-shadow: 0 6px 18px 0 rgb(22 45 61 / 12%);
+  overflow: hidden;
+  //   padding: 50px 60px;
+  visibility: hidden;
+  opacity: 0;
+  //   transform: translateY(-100px);
+  transition: opacity 0s, visibility 0s;
+
+  &.visible {
+    margin-bottom: 30px;
+
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.modal {
+  padding: 50px 0;
+
+  &-header {
+    text-align: center;
+  }
+
+  &-title {
+    font-size: 19px;
+    font-weight: 600;
+    letter-spacing: 0.012em;
+    line-height: 1.2105263158;
+
+    margin-top: 15px;
+  }
+
+  &-subtitle {
+    font-size: 17px;
+    font-weight: 400;
+    letter-spacing: -0.022em;
+    line-height: 1.4705882353;
+
+    margin-top: 10px;
+    color: #1d1d1f;
+  }
+
+  &-description {
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: -0.016em;
+    line-height: 1.4285914286;
+
+    color: #6e6e73;
+
+    margin-top: 15px;
+  }
+
+  &-body {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+
+    margin-top: 45px;
+
+    &-section {
+      padding-top: 40px;
+    }
+
+    &-title {
+      font-size: 17px;
+      font-weight: 400;
+      letter-spacing: -0.022em;
+      line-height: 1.4705882353;
+    }
+
+    &-description {
+      font-size: 17px;
+      font-weight: 400;
+      letter-spacing: -0.022em;
+      line-height: 1.4705882353;
+
+      color: #1d1d1f;
+    }
+  }
+
+  &-icon {
+    width: 25px;
+    height: 25px;
+
+    path {
+      fill: #000;
+    }
+  }
+
+  &-order-button {
+    margin-top: 20px;
+  }
+
+  &-status {
+    font-size: 14px;
+    margin-top: 5px;
+  }
+
+  &-buttons {
+    display: flex;
+    justify-content: center;
+
+    padding: 25px 30px 0;
+
+    & > * {
+      margin-right: 5px;
+    }
+  }
+
+  // Customizable modals
+  &-dialog {
+    padding-bottom: 30px;
+
+    // @media screen and (min-height: 654px) {
+    //   min-height: 500px;
+    // }
+  }
+}
