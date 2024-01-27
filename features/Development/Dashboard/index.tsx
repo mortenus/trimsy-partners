@@ -124,14 +124,31 @@ const Dashboard = () => {
                 </ul>
               </div>
               <div className={styles.message}>
-                <h5 className={styles['message-title']}>Last links opened</h5>
+                <h5 className={styles['message-title']}>Current goal</h5>
+                <div className={styles['message-goal']}>
+                  <span className={styles[`message-goal-left`]}>2 CPS left</span>
+                  <p className={styles[`message-goal-description`]}>
+                    Completing each goal increases the % of regular commission rates
+                  </p>
+                  <Link className={styles[`message-goal-link`]} href="/">
+                    Learn more
+                  </Link>
+                </div>
+              </div>
+
+              <div className={styles.message}>
+                <h5 className={styles['message-title']}>Limited time</h5>
                 <ul className={styles['message-limited']}>
                   <li className={styles[`item`]}>
                     <h5 className={styles[`item-title`]}>New Affiliates Bonus</h5>
                     <Link href="/">Learn more</Link>
                   </li>
-                  <li className={styles[`item`]}>https://trimsy.org/development</li>
-                  <li className={styles[`item`]}>https://trimsy.org/development</li>
+                  <li className={styles[`item`]}>
+                    <h5 className={styles[`item-title`]}>
+                      Early Bird. Commissions are doubled for a limited time.
+                    </h5>
+                    <Link href="/">Learn more</Link>
+                  </li>
                 </ul>
               </div>
             </div>
